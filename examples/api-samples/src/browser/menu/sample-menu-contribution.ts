@@ -243,8 +243,11 @@ export class SampleMenuContribution implements MenuContribution {
             commandId: SampleCommand.id,
             order: '1'
         });
+
         // This menu cannot be registered successfully
         setTimeout(() => {
+            console.log(1111)
+            menus.registerSubmenu(subSubMenuPath, 'Sample sub menu', { order: '2' });
             menus.registerMenuAction(subSubMenuPath, {
                 commandId: SampleCommand2.id,
                 order: '3'
